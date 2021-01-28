@@ -1,3 +1,3 @@
 # BOJ
 
-https://www.acmicpc.net/user/haha8075
+https://www.acmicpc.net/user/dudwo8075
