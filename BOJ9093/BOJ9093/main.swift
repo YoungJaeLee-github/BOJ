@@ -9,6 +9,7 @@ var testCase = Int(readLine()!)!
 var stack: Array<Character> = []
 var size: Int = 0
 
+// method 1
 func push(n: Character) -> Void {
     stack.append(n)
     size += 1
@@ -53,6 +54,26 @@ while testCase != 0 {
             if i != "\n"{ print(i, separator: "", terminator: "") }
         } else {
             push(n: i)
+        }
+    }
+    print()
+    testCase -= 1
+}
+
+// method 2
+while testCase != 0 {
+    var input = readLine()!
+    input.append("\n")
+    
+    for i in input {
+        if i == " " || i == "\n" {
+            while stack.count != 0 {
+                print("\(stack[stack.count-1])", separator: "", terminator: "")
+                stack.remove(at: stack.count-1)
+            }
+            if i != "\n"{ print(i, separator: "", terminator: "") }
+        } else {
+            stack.append(i)
         }
     }
     print()
