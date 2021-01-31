@@ -27,11 +27,7 @@ func pop() -> Character {
 }
 
 func top () -> Character {
-    if empty() {
-        return " "
-    } else {
-        return stack[size - 1]
-    }
+    return empty() ? " " : stack[size - 1]
 }
 
 func empty() -> Bool {
