@@ -30,6 +30,11 @@ func solution(size: Int) -> Void {
     }
 }
 
+// 최소공배수
+func lcm(A: Int, B: Int) -> Int {
+    return A * B / gcd(A, B)
+}
+
 if let numbers = readLine() {
     let parse = numbers.split(separator: " ")
 //    let result = gcd(A: Int(String(parse[0]))!, B: Int(String(parse[1]))!)
